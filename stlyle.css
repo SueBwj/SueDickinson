@@ -1,0 +1,584 @@
+:root {
+  /* color */
+  --text-color: #1e3149;
+  --border-color-1: #314e72;
+  --shadow: #bbb;
+  --border-color-2: #000;
+  --border-color-3: #fff;
+  --border-color-4: #5a6f89;
+  --border-color-5: #7c9abe;
+  --background-color-1: #5a6f89;
+  --background-color-2: #7c9abe;
+  --background-color-3: #2c3d6d;
+  --background-color-4: #f1f8ff;
+  --background-color-5: #0274fe;
+  --text-color-2: #90a3b3;
+  --text-color-3: #72a4cd;
+  --gradient-color: linear-gradient(to top, var(--background-color-2), #fff);
+  /* min-576px */
+  /* min-768px */
+  /* min-992px */
+  /* min-1200px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: "Josefin Sans", cursive, Georgia, "Times New Roman", Times, serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--background-color-2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--background-color-3);
+}
+::-webkit-scrollbar-thumb:horizontal {
+  margin-right: 2px;
+  margin-right: 2px;
+}
+
+/*--------------------------------*\
+    #HEADER
+\*--------------------------------*/
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  to {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+@keyframes openAndClose {
+  from {
+    display: block;
+  }
+  to {
+    display: none;
+  }
+}
+
+.navbar-container {
+  display: flex;
+  position: fixed;
+  padding-top: 1rem;
+  z-index: 5;
+  padding: 30px 100px;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.navbar-container.sticking {
+  background-image: url(./asset/img/navbar.svg);
+  background-size: cover;
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+.logo-container {
+  display: flex;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: border-color 0.5s;
+  transition: transform 1s;
+}
+
+.logo-container.active {
+  border: 2px solid var(--border-color-2);
+  background-image: url(./asset/img/music.svg);
+  background-size: contain;
+  animation: rotateAnimation 2s infinite linear;
+}
+
+.logo-container:hover {
+  border-color: var(--border-color-2);
+  transform: rotate(90deg);
+}
+
+.navbar-container .items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-toggle {
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+  display: none;
+  transition: transform 0.5s ease;
+}
+
+.navbar-toggle .bi {
+  font-size: 2rem;
+  color: var(--background-color-2);
+  z-index: 9;
+}
+
+.navbar-toggle:hover {
+  transform: rotate(90deg);
+}
+
+.items a {
+  display: block;
+  position: relative;
+  margin-left: 35px;
+  padding: 4px 0;
+  font-size: 20px;
+  color: var(--text-color-2);
+}
+
+.items a.active {
+  border-bottom: 2.5px solid var(--border-color-1);
+  color: var(--text-color);
+}
+
+.items a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--border-color-1);
+  transition: width 0.3s ease-in-out;
+}
+
+.items a:hover::after {
+  width: 70%;
+}
+
+.default-music-container {
+  position: absolute;
+  top: 100%;
+  left: 6rem;
+  border: 2px solid var(--border-color-3);
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  animation-name: appear;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  background-color: #fff;
+  display: none;
+  z-index: 8;
+}
+
+.song-panel {
+  width: 280px;
+  height: 180px;
+}
+
+.song-info {
+  display: flex;
+  height: 110px;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.song-cover {
+  margin: 0 20px;
+}
+
+.song-text {
+  margin: 0 10px;
+}
+
+.song-name {
+  margin-bottom: 10px;
+}
+
+.song-ctrl {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.song-change {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--border-color-4);
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.song-change:hover {
+  background-color: var(--background-color-1);
+}
+
+.play-continue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--border-color-5);
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.play-continue:hover {
+  background-color: var(--background-color-2);
+}
+
+.play-pause {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--border-color-5);
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.play-pause:hover {
+  background-color: var(--background-color-2);
+}
+
+.song-list {
+  max-height: 85vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 280px;
+  height: 80px;
+}
+
+.song {
+  margin: 4px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    position: fixed;
+    flex-direction: column;
+  }
+  .logo-container {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+  }
+  .items {
+    position: fixed;
+    top: 7rem;
+    flex-direction: column;
+    left: -20rem;
+    background-color: #fff;
+    width: 20rem;
+    transition: left 0.5s ease;
+  }
+  .items.show {
+    position: fixed;
+    top: 7rem;
+    left: 0;
+    flex-direction: column;
+    width: 20rem;
+    background-color: #fff;
+  }
+  .items a {
+    margin: 2rem 0;
+  }
+  .navbar-toggle {
+    display: block;
+    position: fixed;
+    right: 3rem;
+    top: 2rem;
+  }
+}
+
+/* -------------------------------------- *\
+  #SECTION
+\* -------------------------------------- */
+
+.sue {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sue h2 {
+  font-size: 4rem;
+  margin-left: 5.5rem;
+  font-family: "Gloria Hallelujah", "Caveat";
+}
+
+.sue img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* -------------------------------------- *\
+  #ARTICLE
+\* -------------------------------------- */
+.article-container {
+  margin: 20px 30px;
+}
+
+.article-container .article-title {
+  font-family: "Gloria Hallelujah", "Caveat";
+}
+
+.article-container .card-container {
+  margin: 20px 30px;
+}
+
+.article-container .card-container .card {
+  margin: 10px 20px;
+}
+
+.card-container .card {
+  transition: transform 0.3s;
+}
+
+.article-container h4 {
+  font-family: "Gloria Hallelujah", "Caveat";
+}
+
+.card-container .card:hover {
+  transform: scale(1.1);
+}
+
+.article-container .article-info {
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------------------------------ *\
+  #WRITES
+\* ------------------------------------ */
+
+.daily-writes-container {
+  margin: 60px 30px;
+}
+
+.daily-writes-container h3 {
+  font-size: 28px;
+  font-family: "Gloria Hallelujah", "Caveat";
+}
+
+.writes-container {
+  margin: 50px 30px;
+}
+#writes-con {
+  margin-bottom: 20px;
+}
+
+#writes-items {
+  position: relative;
+}
+
+.writes-container span {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--background-color-5);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: animate 1s linear infinite;
+}
+
+.writes-container .bi {
+  color: var(--text-color-3);
+}
+
+.writes-container #writes-items:hover a {
+  color: var(--background-color-5);
+}
+
+/* ------------------------------------ *\
+  #WORKS
+\* ------------------------------------ */
+.works-container {
+  margin: px 50px;
+}
+
+.works-container .works-title {
+  font-family: "Gloria Hallelujah", "Caveat";
+}
+
+.works-container p {
+  font-size: 20px;
+}
+
+.works-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.works-content i {
+  height: 45px;
+  width: 46px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 46px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.works-content i.left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.works-content i.right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.works-content .works-img {
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 0px;
+  scroll-behavior: smooth;
+}
+
+.works-img.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.works-img.dragging img {
+  pointer-events: none;
+}
+.works-img img {
+  height: 340px;
+  object-fit: cover;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+
+.works-img img:first-child {
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .works-img img {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .works-img img {
+    width: 100%;
+  }
+}
+
+/* ------------------------------------ *\
+  #FOOTER
+\* ------------------------------------ */
+
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 200px;
+  height: 120px;
+  width: 100%;
+  background-color: var(--background-color-2);
+  background-image: url(./asset/img/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 1s ease;
+}
+
+.footer_container .footer-text {
+  margin-left: 30px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer_container .footer-icons {
+  margin-right: 30px;
+}
+
+.footer-icons .bi {
+  margin-left: 10px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.footer-icons .bi:hover {
+  color: var(--background-color-3);
+  cursor: pointer;
+}
+
+.footer-text .icp_a {
+  font-family: "Josefin Sans", cursive, Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.footer-text .icp_a:hover {
+  color: var(--background-color-5);
+}
