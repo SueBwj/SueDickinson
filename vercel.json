@@ -1,3 +1,6 @@
 {
-  "plugins": ["@vercel/optimize-images"]
+  "version": 2,
+  "build": {
+    "plugins": ["@vercel/optimize-images"]
+  }
 }
