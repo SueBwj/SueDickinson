@@ -19,14 +19,29 @@
       href="https://fonts.googleapis.com/css?family=Josefin Sans"
     />
     <!-- bootstrap -->
-    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <!-- bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <!-- fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- my decoration -->
     <link rel="stylesheet" href="./stlyle.css" />
-    
   </head>
   <body>
     <head>
@@ -279,21 +294,22 @@
           <h3>Articles & Shares</h3>
         </div>
         <div class="writes-container">
-          <div class="container overflow-hidden text-center" >
+          <div class="container overflow-hidden text-center">
             <div class="row gy-5" id="writes-con">
-              <div class="col-6"  id="book" class="writes-items">
-                <div class="p-3 border rounded-end shadow-sm" id="writes-items" >
+              <div class="col-6" id="book" class="writes-items">
+                <div class="p-3 border rounded-end shadow-sm" id="writes-items">
                   <i class="bi bi-book"></i>
                   <a href="...">Book Summary and Review</a>
                 </div>
               </div>
-              <div class="col-6"  id="PodMov">
-                <div class="p-3 border rounded-start shadow-sm" id="writes-items">
+              <div class="col-6" id="PodMov">
+                <div
+                  class="p-3 border rounded-start shadow-sm"
+                  id="writes-items"
+                >
                   <i class="bi bi-mic"></i>
-                  </svg>
                   <a href="...">Podcast and Movie Recommendation</a>
                   <i class="bi bi-film"></i>
-                  
                 </div>
               </div>
               <div class="col-6" id="study">
@@ -303,7 +319,10 @@
                 </div>
               </div>
               <div class="col-6" id="writing">
-                <div class="p-3 border rounded-start shadow-sm" id="writes-items">
+                <div
+                  class="p-3 border rounded-start shadow-sm"
+                  id="writes-items"
+                >
                   <i class="bi bi-pencil-square"></i>
                   <a href="...">Writing</a>
                 </div>
@@ -322,13 +341,13 @@
       <div class="works-content">
         <i id="left" class="fa-solid fa-angle-left left"></i>
         <div class="works-img">
-          <img src="./asset/img/work1.png" alt="img">
-          <img src="./asset/img/work2.png" alt="img">
-          <img src="./asset/img/work3.png" alt="img">
-          <img src="./asset/img/work4.png" alt="img">
-          <img src="./asset/img/work5.png" alt="img">
-          <img src="./asset/img/work6.png" alt="img">
-          <img src="./asset/img/work7.png" alt="img">
+          <img src="./asset/img/work1.png" alt="img" />
+          <img src="./asset/img/work2.png" alt="img" />
+          <img src="./asset/img/work3.png" alt="img" />
+          <img src="./asset/img/work4.png" alt="img" />
+          <img src="./asset/img/work5.png" alt="img" />
+          <img src="./asset/img/work6.png" alt="img" />
+          <img src="./asset/img/work7.png" alt="img" />
         </div>
         <i id="right" class="fa-solid fa-angle-right right"></i>
       </div>
@@ -337,7 +356,9 @@
     <div class="footer_container">
       <div class="footer-text">
         <p>© Sue Dickinson 2023. All rights reserved.</p>
-        <a href="https://beian.miit.gov.cn/" target="_blank" class="icp_a">粤ICP备2023082366号</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank" class="icp_a"
+          >粤ICP备2023082366号</a
+        >
       </div>
       <div class="footer-icons">
         <a href="...">
@@ -358,9 +379,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- canvas confetti -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
       function skuraFalling() {
-        let myCanvas = document.createElement('canvas');
+        let myCanvas = document.createElement("canvas");
         document.body.appendChild(myCanvas);
 
         var duration = 3 * 1000;
@@ -389,8 +417,8 @@
               // since particles fall down, skew start toward the top
               y: Math.random() * skew - 0.2,
             },
-            colors: ['#f6c6ce'],
-            shapes: ['circle'],
+            colors: ["#f6c6ce"],
+            shapes: ["circle"],
             gravity: randomInRange(0.6, 0.8),
             scalar: randomInRange(0.4, 1),
             drift: randomInRange(-0.4, 0.4),
@@ -400,15 +428,12 @@
           if (timeLeft > 0) {
             requestAnimationFrame(frame);
           }
-          myCanvas.remove()
+          myCanvas.remove();
         })();
       }
-      const Tokyo = document.querySelector('#Tokyo');
-      Tokyo.addEventListener('click', skuraFalling);
-      
+      const Tokyo = document.querySelector("#Tokyo");
+      Tokyo.addEventListener("click", skuraFalling);
     </script>
-    <!-- bootstrap -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
     <script>
       //animation
       gsap.to(".sue .title", {
@@ -480,30 +505,30 @@
         y: -50,
       });
       //acticle animation
-      gsap.to('#writes-title',{
-        scrollTrigger:"#writes-title",
+      gsap.to("#writes-title", {
+        scrollTrigger: "#writes-title",
         duration: 1,
-        x:100,
+        x: 100,
       });
-      gsap.from('#book',{
-        scrollTrigger:'#book',
+      gsap.from("#book", {
+        scrollTrigger: "#book",
         duration: 1,
-        x:-200,
+        x: -200,
       });
-      gsap.from('#PodMov',{
-        scrollTrigger:'#PodMov',
+      gsap.from("#PodMov", {
+        scrollTrigger: "#PodMov",
         duration: 1,
-        x:200,
+        x: 200,
       });
-      gsap.from('#study',{
-        scrollTrigger:'#study',
+      gsap.from("#study", {
+        scrollTrigger: "#study",
         duration: 1,
-        x:-200,
+        x: -200,
       });
-      gsap.from('#writing',{
-        scrollTrigger:'#writing',
+      gsap.from("#writing", {
+        scrollTrigger: "#writing",
         duration: 1,
-        x:200,
+        x: 200,
       });
     </script>
   </body>
