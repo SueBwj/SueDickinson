@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sue's writing places</title>
+    <link rel="icon" href="../img/logo.svg" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- google fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Gloria Hallelujah"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Caveat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin Sans"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Edu+SA+Beginner&family=Indie+Flower&family=Noto+Serif+SC:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap"
+      rel="stylesheet"
+    />
+    <!-- my style -->
+    <link rel="stylesheet" href="../inner_css/writing_1.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg" id="writing-navbar">
+      <div class="container-lg">
+        <a class="navbar-brand" href="../../index.html">
+          <img
+            src="../../asset/img/logo.svg"
+            alt="Bootstrap"
+            width="50"
+            height="50"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse hamberger"
+          id="navbarTogglerDemo02"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#" id="Gossip_a">Gossipage</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link active" href="#" id="Translations_a"
+                >Translations</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--Breadcrumb -->
+    <div class="breadcrumb container-lg">
+      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">笔译</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            破碎故事之心
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- content -->
+    <div class="content-container">
+      <div class="card text-bg-dark col-7">
+        <img
+          src="../../asset/img/杰罗姆·大卫·塞林格.jpeg"
+          class="card-img"
+          alt="..."
+          id="card-image"
+        />
+        <div class="card-img-overlay">
+          <h5 class="card-title">破碎故事之心</h5>
+          <p class="card-text card-abstract">
+            "Loving you is the important thing, Miss Lester. There are some
+            people who think love is sex and marriage and six o'clock-kisses and
+            children, and perhaps it is, Miss Lester. But do you know what I
+            think? I think love is a touch and yet not a touch."
+          </p>
+          <p class="card-text card-info">
+            <small>Last updated 8.10 2023</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="main-content container-lg">
+      <button type="button" class="btn btn-primary" id="liveToastBtn">
+        Do you want to know more?
+      </button>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div
+          id="liveToast_1"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <img
+              src="../writing_img/icons8-wiki.svg"
+              class="rounded me-2"
+              alt="wiki"
+            />
+            <strong class="me-auto">Wiki</strong>
+            <small>data from wikipedia</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">
+            <em>The Heart of a Broken Story</em>
+            是美国作家J.D.塞林格创作的短篇小说
+          </div>
+        </div>
+      </div>
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div
+          id="liveToast_2"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <img
+              src="../writing_img/icons8-wiki.svg"
+              class="rounded me-2"
+              alt="wiki"
+            />
+            <strong class="me-auto">Wiki</strong>
+            <small>data from wikipedia</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">
+            小说中展示了塞林格的幽默与反讽，同时也因其为塞林格首部以“爱情”为主题的小说而受到关注。
+          </div>
+        </div>
+      </div>
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div
+          id="liveToast_3"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <img
+              src="../../asset/img/logo.svg"
+              class="rounded me-2"
+              alt="sue"
+              width="60px"
+              height="60px"
+            />
+            <strong class="me-auto">Sue</strong>
+            <small>2023 8.10</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">
+            Wonderful love! But competely broke my heart!
+          </div>
+        </div>
+      </div>
+      <div class="content-text-wrapper">
+        <p>
+          Justin
+          Horgenschlag，周薪30美元的印刷工助手，每天差不多有60个陌生女人从他眼前经过。因此，Horgenschlag住在纽约的这几年里，眼前经过了大约75120个不同的女人。在这75120个女人里，大概有25000个在15~30岁之间。在这25000个里只有5000个体重在105~125磅之间<span
+            class="d-inline-block"
+            tabindex="0"
+            data-bs-toggle="popover"
+            data-bs-trigger="hover focus"
+            data-bs-content="约为47.6~56.7公斤"
+          >
+            <button class="btn" type="button" disabled>[1]</button> </span
+          >。在这5000个里只有1000个长得还过得去。只有500个比较有吸引力；只有100个相当迷人；只有25个能引来一声长而缓的口哨声。但只有一个能让Horgenschlag在第一次见面时就坠入爱河。
+        </p>
+        <p>
+          “红颜祸水“通常分为两种。一种是不折不扣的荡妇，另一种则是无意间祸害了别人的美女。
+        </p>
+        <p>
+          她叫Shirley
+          Lester，二十岁（比Horgenschlag小十一岁），身高五英尺四英寸（与Horgenschlag眼睛平齐），体重117磅<span
+            class="d-inline-block"
+            tabindex="0"
+            data-bs-toggle="popover"
+            data-bs-trigger="hover focus"
+            data-bs-content="约为1.62米，53公斤"
+          >
+            <button class="btn" type="button" disabled>[2]</button> </span
+          >（轻得像片羽毛）。Shirley是个速记员，和她妈妈Agnes
+          Lester住在一起，并且供养着她。她妈妈还是老纳尔逊•艾迪<span
+            class="d-inline-block"
+            tabindex="0"
+            data-bs-toggle="popover"
+            data-bs-trigger="hover focus"
+            data-bs-content="Nelson Eddy：（1901年6月29日 - 1967年3月6日）是一位美国歌手和演员，在20世纪30年 代和40年代期间出演过19部音乐电影，以及歌剧和音乐会舞台，电台，电视和夜总会。一度为收入最高的明星。"
+          >
+            <button class="btn" type="button" disabled>[3]</button> </span
+          >的粉丝。提到Shirley的长相，人们总会这样说：“Shirley美得像一幅画。”
+        </p>
+        <p>
+          这天早晨，在第三大道的公车上，Horgenschlag站在Shirley•Lester旁边，他像一只死鸭子一样。这都是因为Shirley的嘴以一种奇特的方式张开着。Shirley在读贴在车上的一则化妆品广告；在她读的时候，她的下巴也随之略微放松了。在Shirley张着嘴、双唇微启的那一小会儿里，她可能是全曼哈顿最致命的女人了。
+        </p>
+        <p>
+          Horgenschlag在她身上看到了一种治疗孤独的良方，自从他来到纽约以来，这个叫孤独的大怪兽一直在他心中游走徘徊。啊，痛苦！站在Shirley•Lester身旁却不能俯身轻吻她微启的双唇，多么痛苦。难以言传的痛苦！
+        </p>
+        <hr />
+        <p>
+          以上是我给科利尔周刊写的小说的开头。我打算写一个温柔动人的“男孩遇见女孩”的故事。我觉得这样比较好。这个世界需要“男孩遇见女孩”这样的故事。但写的时候，很不幸，作者必须要解决问题的是如何让男孩遇见这个女孩。我写不下去了。也不知道要怎样才能让它说得通。我没法让Horgenschlag和Shirley合情合理的相遇。以下是原因：
+        </p>
+        <p>很显然让Horgenschlag俯身并真诚地说出这些话是不可能的：</p>
+        <p>
+          “我请你原谅。我太爱你了。你把我迷住了。我很清楚。我会爱你一辈子。我是一个印刷工助理，每周能赚30美元。天啊，我怎么那么喜欢你。你今晚有空吗？”
+        </p>
+        <p>
+          这个Horgenschlag可能是个傻子，虽然还算不上弱智。这种人活在过去尚有可能，在今天肯定是绝迹的。你总不见得让科利尔的读者咽这种垃圾吧。毕竟，别人花了钱的。
+        </p>
+        <p>
+          当然，我也不能突然给Horgenschlag来一针由威廉•鲍威尔的旧烟盒和弗雷德•阿斯泰尔[4]的旧礼帽混合的温润尔雅的血清。
+        </p>
+        <p>
+          “请您别误解我，小姐。我是杂志的插画家。这是我的名片。我想给您画一幅素描，您是我这辈子遇到的最想画素描的人。也许我们都能从中得益。我今晚能打电话给你吗？或者待会晚点就可以？（短促、爽朗的笑声）我希望我没有听起来太急不可耐。（再次大笑）也许我真的有点。”
+        </p>
+        <p>
+          噢，小伙子。以上这段话要伴随着一抹疲倦、但有点愉快、还有点冒失的微笑说出。只要Horgenschlag能说出来。Shirley自己，自然也是老纳尔逊•艾迪的粉丝，同时还是Keystone
+          Circulating图书馆的积极成员。 也许你开始理解我所纠结的问题了。
+        </p>
+        <p>
+          确实，Horgenschlag可能这么说： “不好意思，你是威尔玛•普丽恰德吗？”
+          Shirley会冷淡地回答： “不是。” 然后在车厢的另一侧找个更舒服的地方站着
+          “这真有意思”
+          Horgenschlag会继续说道，“我还暗自发誓你一定是威尔玛•普丽恰德。嗯，你有可能是，从西雅图来的？”
+          “不。”——比前面更冷淡了。 “西雅图是我的故乡。” 她又换了个位置站着。
+          “很棒的小镇，西雅图。我是说那真是个很棒的小镇。我到这里——我是说纽约——才四年。我是个印刷工助理。我叫Justin
+          Horgenschlag。” “我真的一点也不感兴趣。”
+        </p>
+        <p>
+          哎，Horgenschlag没有可以用这个方法的条件。在这个情形下，他既没长相又没魅力，也没法穿得体面点能让Shirley对他感兴趣。他一点机会也没有。而且，像我之前说过的，要写一个绝妙的“男孩遇见女孩”的故事，高明的地方在于如何让这个男孩遇见这个女孩。
+          也许Horgenschlag会晕过去，并试图抓点什么来稳住自己：抓到了Shirley的脚踝。他可能撕坏人家的长筒袜，没准还撕出一条漂亮的抽丝线。人们会给倒霉的Horgenschlag腾出地方来，而他则会站起身来，嘟囔着：“我没事，谢谢。”接着，“啊，天哪！我太抱歉了，小姐。我把你的丝袜扯坏了。请一定让我赔。我现在没什么现金，麻烦把你的地址留给我。”
+        </p>
+        <p>
+          Shirley不会给他地址。她只会变得又窘又结巴。“没事。”她会说，但愿Horgenschlag没有被生出来过。而且这个想法不太合逻辑。Horgenschlag，一个西雅图小伙，从没有想过去抓Shirley的脚踝。至少不是在第三大道的公车上。
+        </p>
+        <p>
+          更符合逻辑的可能是Horgenschlag会铤而走险。至今仍有一些人愿意为爱铤而走险。也许Horgenschlag是其中之一。他也许会夺过Shirley的手提包，冲出身后的车门。Shirley会尖叫。人们会听到叫声，并想起《边城英烈传》[5]或其他什么。Horgenschlag的溃逃，姑且这么说，被制止了。汽车停了下来。威尔逊巡警——他很长时间都没逮住过什么人了——在现场了解情况。
+        </p>
+        <p>
+          这里发生了什么事？警官，这个男人想偷我的钱包。
+          Horgenschlag被拖进法庭。Shirley，自然，必须参加庭审。他们上报了各自的地址；因此Horgenschlag得知了Shirley神圣居所的位置。
+          伯金斯法官——他在自己家中甚至连一杯好点的、正宗点的咖啡都喝不上——判处Horgenschlag一年监禁。Shirley咬着嘴唇，但Horgenschlag已经被带走了。
+        </p>
+        <p>在狱中，Horgenschlag给Shirley•Lester写了如下的一封信：</p>
+        <div class="letter">
+          <p>“亲爱的Lester小姐：</p>
+          <p>
+            我真的不是有意要偷你的钱包的。我这样做是因为我爱你。我只是想能够认识你。你有空的话能不能偶尔给我写封信？
+          </p>
+          <p>这里非常孤独，我好爱你，但愿你有空的话能来看看我。</p>
+          <p class="name-down">你的朋友，</p>
+          <p class="name-down">Justin•Horgenschlag”</p>
+        </div>
+        <p>
+          Shirley把这封信向她所有的朋友们都展示了一下。他们说：“哈，这挺可爱的，Shirley”。
+        </p>
+        <p>
+          Shirley同意这也算是某种意义上的可爱。也许她会回信。“没错！回信吧。让我放松一下。而且也没什么损失。”
+        </p>
+        <p>所以Shirley给Horgenschlag回了封信。</p>
+        <div class="letter">
+          <p>“亲爱的Horgenschlag先生：</p>
+          <p>我收到了你的来信，并为发生的一切确实感到非常抱歉。</p>
+          <p>
+            不幸的是，事到如今我们也无能为力了，但想到这曲折的隐情我就很难过。还好，你的刑期不算长，很快就能出来了。祝你好运。
+          </p>
+          <p class="name-down">你诚挚的 Shirley•Lester</p>
+        </div>
+        <div class="letter">
+          <p>“亲爱的Lester小姐：</p>
+          <p>你不知道收到你的回信我有多么欢欣鼓舞。</p>
+          <p>
+            你一点也不用难过。这都是我的错，是我太疯狂了，因此你完全不用这么想。我们这里每周都能看一次电影，因此真的不算坏。
+          </p>
+          <p>
+            我今年31岁，来自西雅图。我到纽约有4年了，只有在偶尔相当寂寞的时候才会怀念那个很棒的小镇。你是我在见过的最美丽的姑娘，即使在西雅图也是。我希望你能在哪个周六下午来看我，探视时间是两点到四点，我会付你的火车票钱。
+          </p>
+          <p class="name-down">你的朋友，</p>
+          <p class="name-down">Justin•Horgenschlag</p>
+        </div>
+        <p>
+          Shirley同样会向她所有的朋友展示这封信。但她不会回这封了。谁都看得出这个Horgenschlag是个傻瓜。毕竟。她已经回过一封了。要是她回复了这封愚蠢的信，那就真的要经年累月没完没了了。她对这个男人已然仁至义尽。还有这算什么名字啊。Horgenschlag。
+        </p>
+        <p>
+          此时，狱中的Horgenschlag正备受煎熬，即使他们每周能看一次电影。他的狱友是猎鸟•摩根和切片机•巴克，这两个小伙住在里屋，他们觉得Horgenschlag长得很像那个曾经在芝加哥背叛过他们的家伙。他们已经确信那个鼠脸•费列罗[6]和Justin•Horgenschlag是同一个人。
+        </p>
+        <span class="talk">“但我不是鼠脸•费列罗，”Horgenschlag对他们说。</span>
+        <span class="talk"
+          >“别给我来这套”切片机说，随手把Horgenschlag仅有的一点食物打翻在地。</span
+        >
+        <span class="talk">“敲他的头，”猎鸟说。</span>
+        <span class="talk"
+          >“我跟你们说我之所以进来只是因为我在第三大道公车上偷了一个姑娘的钱包，”</span
+        >
+        <span class="talk">
+          Horgenschlag辩解道：“只不过我并不是真的要偷。我爱上了那个姑娘，只有这样我才能认识她。”</span
+        >
+        <span class="talk">“别给我来这套” 切片机说。 “敲他的头” 猎鸟说。</span>
+
+        <p>
+          一天，十七名囚犯试图越狱。在操场上放风的时候，切片机•巴克诱骗了典狱长的侄女，八岁的丽丝贝斯•苏，并紧紧抓住她。他用他八乘十二的大手搂着小女孩的腰，举起来让典狱长看。
+        </p>
+
+        <span class="talk">
+          “喂，典狱长！”切片机叫道。“打开大门，要不就给这个孩子盖上裹尸布吧”
+        </span>
+        <span class="talk">“我不怕的，伯特叔叔！”丽丝贝斯叫道。</span>
+        <span class="talk">
+          “放下那个孩子，切片机！”典狱长命令道，命令的有气无力。
+        </span>
+        <p>
+          但切片机知道现在看守已经在他的掌控之中了。十七个大男人和一个金发小孩走出大门。十六个大男人和一个金发小孩安全地走了出去。一个高塔上的守卫自认为找到了将切片机一枪爆头的绝佳时机，因此破坏了整个越狱队伍的队形。但他打偏了，正好成功击中了跟在切片机后紧张兮兮的小个子男人，一枪毙命。
+        </p>
+        <p>猜猜是谁？</p>
+        <p>
+          于是乎，我计划为科利尔周刊写一篇“男孩遇见女孩”的小说——一个柔情、刻骨的爱情故事，被男主角的死阻碍着。
+        </p>
+        <p>
+          好了，要不是Shirley迟迟不来的第二封信让Horgenschlag陷入绝望和恐慌，他是绝不会成为那亡命十七人中的一个的。但事实仍旧是她没有回他的第二封信。就算等上一百年她也不会回的。我没法改变这事实。
+        </p>
+        <p>
+          真丢脸啊。多可惜啊，Horgenschlag在狱中没有给Shirley•Lester写下下面这封信：
+        </p>
+        <div class="letter">
+          <p>“亲爱的Lester小姐：</p>
+          <p>
+            我希望我的话不会让你烦恼或尴尬。我写下这些，Lester小姐，是因为我想让你知道我不是寻常意义上的小偷。
+          </p>
+          <p>
+            我想让你知道，我偷你的包，是因为我在公交车上对你一见钟情。我想不出任何办法来认识你，除了做出这轻率的——准确的说是愚蠢的举动。可你知道，恋爱中的人总是愚蠢的。
+          </p>
+          <p>我爱上你双唇微启的样子。你为我揭开了万事万物的谜底。</p>
+          <p>
+            自从我四年前来到纽约，我从来没有不开心过，但也没有开心过。说起来，我和纽约成千上万的仅仅是活着的年轻人没什么区别。
+          </p>
+          <p>
+            我从西雅图来到纽约。我想要变得富有，出名，体面，文雅。但这四年间，我意识到我不会变得富有，出名，体面，文雅。我是个优秀的印刷员助理，但也仅此而已。有天印刷员病了，我必须替他的活。我把事情搞得一团糟啊，Lester小姐。根本没人听我的。我叫排字员们去工作时，他们就咯咯地笑。我不责备他们。我下命令的时候像傻子一样。我想我不过是那数百万从没想过要发号施令的人之一。但我一点也不在意。我老板刚雇了个23岁的小子。他才23岁，而我已经31了，并且在同一个地方做了四年。但我知道有一天他会变成印刷主管，而我还是当他的助理。但我不介意知道这事实。
+          </p>
+          <p>
+            爱你是一件特别的重要的事，Lester小姐。有人认为爱是性，是婚姻，是清晨六点的吻，是孩子，也许真是这样的，Lester小姐。但你知道我怎么想吗？我觉得爱是想触碰又收回手。[7]
+          </p>
+          <p>
+            我想对于一个女人来说，嫁给一个别人看来是富有、英俊、聪明或者受欢迎的男人是很重要的。我甚至不受欢迎。我甚至也不招恨。我只是——我仅仅是——Justin•Horgenschlag。我从没让人感到愉快、难过、生气，哪怕厌恶。我想人们只会注意到我是个好人，但也仅此而已。
+          </p>
+          <p>
+            我小时候从来没人说过我可爱、聪明或是好看。如果他们非得说些什么，他们会说我有结实的小腿。
+          </p>
+          <p>
+            我不指望你会回信，Lester小姐。虽然你的回信是我在这个世界上最想要的东西，但坦白说我真的不指望。我只想让你知道实情。如果我对你的爱只是把我带向新的沉痛，那也是我自找的。
+          </p>
+          <p class="name-down">
+            也许有一天你会理解并且原谅我这个笨拙的仰慕者，
+          </p>
+          <p class="name-down">Justin•Horgenschlag</p>
+        </div>
+        <p>而以下这封信自然也是同样更不可能寄出的了。</p>
+        <div class="letter">
+          <p>“亲爱的Horgenschlag先生：</p>
+          <p>
+            我收到你的信了，非常喜欢。知道事情竟然是这样的，我感到内疚而难过。要是你开口对我说话而不是抢走我的包大概会好一些！但如果真的那样，我大概也只会对你的攀谈冷漠置之吧。
+          </p>
+          <p>
+            现在是午餐时间，我独自待在办公室里写信给你。今天中午我想一个人呆着。我觉得要是我非得和女同事们一起去自助餐厅吃午饭，听她们像往常一样嘴里含着东西叽叽喳喳讲话，我一定会失声尖叫起来的。
+          </p>
+          <p>
+            我不在乎你不是所谓的成功人士，或者你并不英俊，不富有，不出名，不文雅。换作以前我会在乎的。当我还是个高中生的时候，我总是爱上那些Joe
+            Glamor[8]里的男孩子。唐纳德•尼克尔森，他会在雨中漫步，能将莎翁的十四行诗倒背如流。鲍勃•雷西，一个帅气的家伙，能从底线投篮命中，锁定比分让对手无力翻盘。哈利•米勒，他很害羞，有一双漂亮的棕色眼睛，很耐看。
+          </p>
+          <p>但我人生中的那段疯狂岁月已经结束了。</p>
+          <p>
+            你办公室里那些对你的命令咯咯乱笑的家伙，他们已经上了我的黑名单了。我恨他们，尽管我没有恨过什么人。
+          </p>
+          <p>
+            你看到的是我精心打扮过的样子。擦掉这些脂粉，相信我，我没有迷人的美貌。请写信告诉我你什么时候能接待访客。我想让你重新看看我。我想要确定你不是为了我虚假的外表。
+          </p>
+          <p>
+            啊，我多希望你当时能告诉法官你偷我钱包的原因啊！我们会在一起，然后能谈论所有那许许多多我们可能拥有的相通之处。
+          </p>
+          <p>请告诉我什么时候能来看你。</p>
+          <p class="name-down">你诚挚的，</p>
+          <p class="name-down">Shirley•Lester</p>
+        </div>
+        <p>
+          但Justin•Horgenschlag永远不可能认识Shirley•Lester了。她在56号街下了车，而他在31号街下车。那天晚上，Shirley•Lester和Howard
+          Lawrence一起去看电影，她很爱他。Howard觉得Shirley是个大大方方的女孩，但这是目前为止他所知道的一切。同晚，Justin•Horgenschlag宅在家里，收听Lux
+          Toilet
+          Soap的广播剧。他整晚都在想Shirley，第二天接着想，之后的整个月都频繁地想起她。突然，他被介绍给了Doris
+          Hillman，这个女人已经开始担心自己要嫁不出去了。但在Justin•Horgenschlag了解到这点之前，Doris
+          Hillman和其他事情让他把Shirley•Lester抛之脑后。而Shirley•Lester，以及对她的念想，全都无影无踪了。
+        </p>
+        <p>
+          这就是为什么我从来不给利尔周刊[9]写”男孩遇见女孩的故事”，因为在所有”男孩遇见女孩“的故事里面，那个男孩最终总能遇见那个女孩。
+        </p>
+      </div>
+      <div class="post-reading-progress-indicator">
+        <span></span>
+      </div>
+      <div class="backToTop">
+        <button><i class="bi bi-caret-up-square-fill"></i></button>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footer_container">
+      <div class="footer-text">
+        <p>© Sue Dickinson 2023. All rights reserved.</p>
+        <a href="https://beian.miit.gov.cn/" target="_blank" class="icp_a"
+          >粤ICP备2023082366号</a
+        >
+      </div>
+      <div class="footer-icons">
+        <a href="...">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://github.com/SueBwj" target="_blank">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="" target="_blank">
+          <i class="bi bi-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../inner_js/writing_1.js"></script>
+  </body>
+</html>
